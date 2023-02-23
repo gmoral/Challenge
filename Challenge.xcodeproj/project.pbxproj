@@ -9,24 +9,14 @@
 /* Begin PBXBuildFile section */
 		B38C52CA29A7CE5000887076 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C52C929A7CE5000887076 /* AppDelegate.swift */; };
 		B38C52CC29A7CE5000887076 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C52CB29A7CE5000887076 /* SceneDelegate.swift */; };
-		B38C52CE29A7CE5000887076 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C52CD29A7CE5000887076 /* ViewController.swift */; };
-		B38C52D129A7CE5000887076 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B38C52CF29A7CE5000887076 /* Main.storyboard */; };
+		B38C52CE29A7CE5000887076 /* HomeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C52CD29A7CE5000887076 /* HomeMenuViewController.swift */; };
 		B38C52D329A7CE5000887076 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B38C52D229A7CE5000887076 /* Assets.xcassets */; };
 		B38C52D629A7CE5000887076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B38C52D429A7CE5000887076 /* LaunchScreen.storyboard */; };
 		B38C52E129A7CE5100887076 /* ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C52E029A7CE5100887076 /* ChallengeTests.swift */; };
-		B38C52EB29A7CE5100887076 /* ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C52EA29A7CE5100887076 /* ChallengeUITests.swift */; };
-		B38C52ED29A7CE5100887076 /* ChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C52EC29A7CE5100887076 /* ChallengeUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		B38C52DD29A7CE5100887076 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B38C52BE29A7CE5000887076 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B38C52C529A7CE5000887076;
-			remoteInfo = Challenge;
-		};
-		B38C52E729A7CE5100887076 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B38C52BE29A7CE5000887076 /* Project object */;
 			proxyType = 1;
@@ -39,16 +29,12 @@
 		B38C52C629A7CE5000887076 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38C52C929A7CE5000887076 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B38C52CB29A7CE5000887076 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B38C52CD29A7CE5000887076 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B38C52D029A7CE5000887076 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B38C52CD29A7CE5000887076 /* HomeMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuViewController.swift; sourceTree = "<group>"; };
 		B38C52D229A7CE5000887076 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B38C52D529A7CE5000887076 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B38C52D729A7CE5000887076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B38C52DC29A7CE5100887076 /* ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38C52E029A7CE5100887076 /* ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeTests.swift; sourceTree = "<group>"; };
-		B38C52E629A7CE5100887076 /* ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B38C52EA29A7CE5100887076 /* ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeUITests.swift; sourceTree = "<group>"; };
-		B38C52EC29A7CE5100887076 /* ChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +52,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B38C52E329A7CE5100887076 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +60,6 @@
 			children = (
 				B38C52C829A7CE5000887076 /* Challenge */,
 				B38C52DF29A7CE5100887076 /* ChallengeTests */,
-				B38C52E929A7CE5100887076 /* ChallengeUITests */,
 				B38C52C729A7CE5000887076 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +69,6 @@
 			children = (
 				B38C52C629A7CE5000887076 /* Challenge.app */,
 				B38C52DC29A7CE5100887076 /* ChallengeTests.xctest */,
-				B38C52E629A7CE5100887076 /* ChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,12 +76,7 @@
 		B38C52C829A7CE5000887076 /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				B38C52C929A7CE5000887076 /* AppDelegate.swift */,
-				B38C52CB29A7CE5000887076 /* SceneDelegate.swift */,
-				B38C52CD29A7CE5000887076 /* ViewController.swift */,
-				B38C52CF29A7CE5000887076 /* Main.storyboard */,
-				B38C52D229A7CE5000887076 /* Assets.xcassets */,
-				B38C52D429A7CE5000887076 /* LaunchScreen.storyboard */,
+				B38C52F929A7CFDF00887076 /* App */,
 				B38C52D729A7CE5000887076 /* Info.plist */,
 			);
 			path = Challenge;
@@ -118,13 +90,256 @@
 			path = ChallengeTests;
 			sourceTree = "<group>";
 		};
-		B38C52E929A7CE5100887076 /* ChallengeUITests */ = {
+		B38C52F929A7CFDF00887076 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				B38C52EA29A7CE5100887076 /* ChallengeUITests.swift */,
-				B38C52EC29A7CE5100887076 /* ChallengeUITestsLaunchTests.swift */,
+				B38C52FF29A7D06300887076 /* Storage */,
+				B38C52FE29A7D04E00887076 /* Resources */,
+				B38C52FD29A7D03900887076 /* Networking */,
+				B38C52FC29A7D01E00887076 /* Common */,
+				B38C52FB29A7CFFC00887076 /* ScreenModule */,
+				B38C52FA29A7CFE500887076 /* CompositionRoot */,
 			);
-			path = ChallengeUITests;
+			path = App;
+			sourceTree = "<group>";
+		};
+		B38C52FA29A7CFE500887076 /* CompositionRoot */ = {
+			isa = PBXGroup;
+			children = (
+				B38C531729A7D44F00887076 /* System */,
+				B38C531529A7D33900887076 /* DIContainer */,
+				B38C531429A7D32800887076 /* Factories */,
+				B38C531129A7D2DE00887076 /* Coordinator */,
+			);
+			path = CompositionRoot;
+			sourceTree = "<group>";
+		};
+		B38C52FB29A7CFFC00887076 /* ScreenModule */ = {
+			isa = PBXGroup;
+			children = (
+				B38C531629A7D36F00887076 /* LaunchScreen */,
+				B38C530529A7D0F400887076 /* Origin */,
+				B38C530429A7D0E300887076 /* Episodes */,
+				B38C530329A7D0D500887076 /* Locations */,
+				B38C530629A7D10700887076 /* LocationDetail */,
+				B38C530129A7D0AE00887076 /* Characters */,
+				B38C530229A7D0C200887076 /* CharacterDetail */,
+				B38C530029A7D07900887076 /* HomeMenu */,
+			);
+			path = ScreenModule;
+			sourceTree = "<group>";
+		};
+		B38C52FC29A7D01E00887076 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B38C531029A7D29D00887076 /* Localize */,
+				B38C530F29A7D28600887076 /* StateController */,
+				B38C530E29A7D27900887076 /* Utils */,
+				B38C530A29A7D21500887076 /* Layer */,
+				B38C530929A7D20300887076 /* Components */,
+				B38C530829A7D1B900887076 /* Constants */,
+				B38C530729A7D19E00887076 /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B38C52FD29A7D03900887076 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		B38C52FE29A7D04E00887076 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B38C52D229A7CE5000887076 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B38C52FF29A7D06300887076 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		B38C530029A7D07900887076 /* HomeMenu */ = {
+			isa = PBXGroup;
+			children = (
+				B38C52CD29A7CE5000887076 /* HomeMenuViewController.swift */,
+			);
+			path = HomeMenu;
+			sourceTree = "<group>";
+		};
+		B38C530129A7D0AE00887076 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		B38C530229A7D0C200887076 /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CharacterDetail;
+			sourceTree = "<group>";
+		};
+		B38C530329A7D0D500887076 /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Locations;
+			sourceTree = "<group>";
+		};
+		B38C530429A7D0E300887076 /* Episodes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Episodes;
+			sourceTree = "<group>";
+		};
+		B38C530529A7D0F400887076 /* Origin */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Origin;
+			sourceTree = "<group>";
+		};
+		B38C530629A7D10700887076 /* LocationDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LocationDetail;
+			sourceTree = "<group>";
+		};
+		B38C530729A7D19E00887076 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B38C530829A7D1B900887076 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		B38C530929A7D20300887076 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B38C530A29A7D21500887076 /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				B38C530D29A7D24400887076 /* Presentation */,
+				B38C530C29A7D23100887076 /* Domain */,
+				B38C530B29A7D22500887076 /* Data */,
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
+		B38C530B29A7D22500887076 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B38C530C29A7D23100887076 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B38C530D29A7D24400887076 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B38C530E29A7D27900887076 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B38C530F29A7D28600887076 /* StateController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StateController;
+			sourceTree = "<group>";
+		};
+		B38C531029A7D29D00887076 /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localize;
+			sourceTree = "<group>";
+		};
+		B38C531129A7D2DE00887076 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				B38C531329A7D30700887076 /* CoordinatorScreen */,
+				B38C531229A7D30100887076 /* Utils */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		B38C531229A7D30100887076 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B38C531329A7D30700887076 /* CoordinatorScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoordinatorScreen;
+			sourceTree = "<group>";
+		};
+		B38C531429A7D32800887076 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		B38C531529A7D33900887076 /* DIContainer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DIContainer;
+			sourceTree = "<group>";
+		};
+		B38C531629A7D36F00887076 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B38C52D429A7CE5000887076 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		B38C531729A7D44F00887076 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				B38C52C929A7CE5000887076 /* AppDelegate.swift */,
+				B38C52CB29A7CE5000887076 /* SceneDelegate.swift */,
+			);
+			path = System;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +380,6 @@
 			productReference = B38C52DC29A7CE5100887076 /* ChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B38C52E529A7CE5100887076 /* ChallengeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B38C52F629A7CE5100887076 /* Build configuration list for PBXNativeTarget "ChallengeUITests" */;
-			buildPhases = (
-				B38C52E229A7CE5100887076 /* Sources */,
-				B38C52E329A7CE5100887076 /* Frameworks */,
-				B38C52E429A7CE5100887076 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B38C52E829A7CE5100887076 /* PBXTargetDependency */,
-			);
-			name = ChallengeUITests;
-			productName = ChallengeUITests;
-			productReference = B38C52E629A7CE5100887076 /* ChallengeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +394,6 @@
 						CreatedOnToolsVersion = 14.2;
 					};
 					B38C52DB29A7CE5100887076 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = B38C52C529A7CE5000887076;
-					};
-					B38C52E529A7CE5100887076 = {
 						CreatedOnToolsVersion = 14.2;
 						TestTargetID = B38C52C529A7CE5000887076;
 					};
@@ -221,7 +414,6 @@
 			targets = (
 				B38C52C529A7CE5000887076 /* Challenge */,
 				B38C52DB29A7CE5100887076 /* ChallengeTests */,
-				B38C52E529A7CE5100887076 /* ChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,18 +425,10 @@
 			files = (
 				B38C52D629A7CE5000887076 /* LaunchScreen.storyboard in Resources */,
 				B38C52D329A7CE5000887076 /* Assets.xcassets in Resources */,
-				B38C52D129A7CE5000887076 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B38C52DA29A7CE5100887076 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B38C52E429A7CE5100887076 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -258,7 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B38C52CE29A7CE5000887076 /* ViewController.swift in Sources */,
+				B38C52CE29A7CE5000887076 /* HomeMenuViewController.swift in Sources */,
 				B38C52CA29A7CE5000887076 /* AppDelegate.swift in Sources */,
 				B38C52CC29A7CE5000887076 /* SceneDelegate.swift in Sources */,
 			);
@@ -272,15 +456,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B38C52E229A7CE5100887076 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B38C52ED29A7CE5100887076 /* ChallengeUITestsLaunchTests.swift in Sources */,
-				B38C52EB29A7CE5100887076 /* ChallengeUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,22 +464,9 @@
 			target = B38C52C529A7CE5000887076 /* Challenge */;
 			targetProxy = B38C52DD29A7CE5100887076 /* PBXContainerItemProxy */;
 		};
-		B38C52E829A7CE5100887076 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B38C52C529A7CE5000887076 /* Challenge */;
-			targetProxy = B38C52E729A7CE5100887076 /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B38C52CF29A7CE5000887076 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B38C52D029A7CE5000887076 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B38C52D429A7CE5000887076 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -442,9 +604,9 @@
 				INFOPLIST_FILE = Challenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,9 +632,9 @@
 				INFOPLIST_FILE = Challenge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -526,42 +688,6 @@
 			};
 			name = Release;
 		};
-		B38C52F729A7CE5100887076 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KZ7KQ2PBS3;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Challenge;
-			};
-			name = Debug;
-		};
-		B38C52F829A7CE5100887076 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = KZ7KQ2PBS3;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Challenge;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -588,15 +714,6 @@
 			buildConfigurations = (
 				B38C52F429A7CE5100887076 /* Debug */,
 				B38C52F529A7CE5100887076 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B38C52F629A7CE5100887076 /* Build configuration list for PBXNativeTarget "ChallengeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B38C52F729A7CE5100887076 /* Debug */,
-				B38C52F829A7CE5100887076 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
