@@ -33,7 +33,7 @@ extension UIView {
         }
         
         if let left = left {
-            leftAnchor.constraint(equalTo: left, constant: -pLeft).isActive = true
+            leftAnchor.constraint(equalTo: left, constant: pLeft).isActive = true
         }
     }
     
