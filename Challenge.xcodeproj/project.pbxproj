@@ -15,6 +15,7 @@
 		B31976DB29AA5D02001DA671 /* MenuDTO+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31976DA29AA5D02001DA671 /* MenuDTO+Mapper.swift */; };
 		B31976DD29AA5DD2001DA671 /* PropertyIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31976DC29AA5DD2001DA671 /* PropertyIterator.swift */; };
 		B31976DF29AA7757001DA671 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31976DE29AA7757001DA671 /* Endpoint.swift */; };
+		B31976E229AAB427001DA671 /* SpinnerDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31976E129AAB427001DA671 /* SpinnerDisplayable.swift */; };
 		B38C52CA29A7CE5000887076 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C52C929A7CE5000887076 /* AppDelegate.swift */; };
 		B38C52CC29A7CE5000887076 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C52CB29A7CE5000887076 /* SceneDelegate.swift */; };
 		B38C52CE29A7CE5000887076 /* HomeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C52CD29A7CE5000887076 /* HomeMenuViewController.swift */; };
@@ -57,6 +58,7 @@
 		B31976DA29AA5D02001DA671 /* MenuDTO+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuDTO+Mapper.swift"; sourceTree = "<group>"; };
 		B31976DC29AA5DD2001DA671 /* PropertyIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyIterator.swift; sourceTree = "<group>"; };
 		B31976DE29AA7757001DA671 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		B31976E129AAB427001DA671 /* SpinnerDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerDisplayable.swift; sourceTree = "<group>"; };
 		B38C52C629A7CE5000887076 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38C52C929A7CE5000887076 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B38C52CB29A7CE5000887076 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,14 @@
 			path = DTO;
 			sourceTree = "<group>";
 		};
+		B31976E029AAB3F3001DA671 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				B31976E129AAB427001DA671 /* SpinnerDisplayable.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		B38C52BD29A7CE5000887076 = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +229,7 @@
 		B38C52FC29A7D01E00887076 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B31976E029AAB3F3001DA671 /* Components */,
 				B38C531029A7D29D00887076 /* Localize */,
 				B38C530F29A7D28600887076 /* StateController */,
 				B38C530E29A7D27900887076 /* Utils */,
@@ -632,6 +643,7 @@
 				B3C9F97C29A96EA4007B5919 /* MenuRepository.swift in Sources */,
 				B3C9F97729A95EEC007B5919 /* Reusable.swift in Sources */,
 				B3C9F98C29A97718007B5919 /* StateController.swift in Sources */,
+				B31976E229AAB427001DA671 /* SpinnerDisplayable.swift in Sources */,
 				B3C9F98029A970A4007B5919 /* MenuEntity.swift in Sources */,
 				B38C52CA29A7CE5000887076 /* AppDelegate.swift in Sources */,
 				B38C532129A7E76800887076 /* HomeFactory.swift in Sources */,
