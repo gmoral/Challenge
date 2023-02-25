@@ -15,24 +15,40 @@ protocol SpinnerDisplayable : AnyObject {
 extension SpinnerDisplayable where Self : UIViewController {
     
     func showSpinner() {
+        guard doesNotExistAnotherSpinner else { return }
+        
         let containerView = UIView()
         view.addSubview(containerView)
-        containerView.tag = 100
+        containerView.tag = tagIdentifier
         containerView.fillSuperView(widthPadding: 0)
-        containerView.backgroundColor = UIColor.red.withAlphaComponent(0.5)
+        containerView.backgroundColor = UIColor.red.withAlphaComponent(opacity)
         
+        addSpinnerIndicatorToContainer(containerView: containerView)
+    }
+    
+    private func addSpinnerIndicatorToContainer(containerView: UIView) {
         let spinner = UIActivityIndicatorView()
         containerView.addSubview(spinner)
-        spinner.translatesAutoresizingMaskIntoConstraints = false
-        spinner.centerXAnchor.constraint(equalTo: containerView.centerXAnchor).isActive = true
-        spinner.centerYAnchor.constraint(equalTo: containerView.centerYAnchor).isActive = true
+        spinner.setCenterConstraints(parent: containerView)
         spinner.startAnimating()
     }
     
     func hideSpinner() {
-        if let foundView = view.viewWithTag(100) {
+        if let foundView = view.viewWithTag(tagIdentifier) {
             foundView.removeFromSuperview()
         }
+    }
+    
+    private var doesNotExistAnotherSpinner: Bool {
+        view.viewWithTag(tagIdentifier) == nil
+    }
+    
+    private var tagIdentifier: Int {
+        100
+    }
+    
+    private var opacity: CGFloat {
+        0.5
     }
 }
 

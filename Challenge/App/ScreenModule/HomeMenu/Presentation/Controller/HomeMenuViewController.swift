@@ -39,7 +39,7 @@ final class HomeMenuViewController: UICollectionViewController {
                 switch state {
                     
                 case .success:
-                    self.hideSpinner()
+                    //self.hideSpinner()
                     self.collectionView.reloadData()
                 case .loading:
                     self.showSpinner()

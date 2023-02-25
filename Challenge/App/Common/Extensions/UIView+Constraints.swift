@@ -49,4 +49,15 @@ extension UIView {
                        pBottom: widthPadding,
                        pLeft: widthPadding)
     }
+    
+    func setCenterConstraints(
+        parent: UIView? = nil
+    ){
+        translatesAutoresizingMaskIntoConstraints = false
+        
+        if let parent = parent {
+            centerXAnchor.constraint(equalTo: parent.centerXAnchor).isActive = true
+            centerYAnchor.constraint(equalTo: parent.centerYAnchor).isActive = true
+        }
+    }
 }
