@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B31976CD29AA4B69001DA671 /* ApiClientService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31976CC29AA4B69001DA671 /* ApiClientService.swift */; };
+		B31976D029AA4CBC001DA671 /* ApiClientServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31976CF29AA4CBC001DA671 /* ApiClientServiceImp.swift */; };
+		B31976D329AA4E05001DA671 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31976D229AA4E05001DA671 /* ApiError.swift */; };
+		B31976D629AA563F001DA671 /* HttpResponseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31976D529AA563F001DA671 /* HttpResponseStatus.swift */; };
+		B31976D929AA5BD8001DA671 /* MenuDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31976D829AA5BD8001DA671 /* MenuDTO.swift */; };
+		B31976DB29AA5D02001DA671 /* MenuDTO+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31976DA29AA5D02001DA671 /* MenuDTO+Mapper.swift */; };
+		B31976DD29AA5DD2001DA671 /* PropertyIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31976DC29AA5DD2001DA671 /* PropertyIterator.swift */; };
+		B31976DF29AA7757001DA671 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31976DE29AA7757001DA671 /* Endpoint.swift */; };
 		B38C52CA29A7CE5000887076 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C52C929A7CE5000887076 /* AppDelegate.swift */; };
 		B38C52CC29A7CE5000887076 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C52CB29A7CE5000887076 /* SceneDelegate.swift */; };
 		B38C52CE29A7CE5000887076 /* HomeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C52CD29A7CE5000887076 /* HomeMenuViewController.swift */; };
@@ -41,6 +49,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B31976CC29AA4B69001DA671 /* ApiClientService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientService.swift; sourceTree = "<group>"; };
+		B31976CF29AA4CBC001DA671 /* ApiClientServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClientServiceImp.swift; sourceTree = "<group>"; };
+		B31976D229AA4E05001DA671 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		B31976D529AA563F001DA671 /* HttpResponseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpResponseStatus.swift; sourceTree = "<group>"; };
+		B31976D829AA5BD8001DA671 /* MenuDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDTO.swift; sourceTree = "<group>"; };
+		B31976DA29AA5D02001DA671 /* MenuDTO+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MenuDTO+Mapper.swift"; sourceTree = "<group>"; };
+		B31976DC29AA5DD2001DA671 /* PropertyIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyIterator.swift; sourceTree = "<group>"; };
+		B31976DE29AA7757001DA671 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B38C52C629A7CE5000887076 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38C52C929A7CE5000887076 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B38C52CB29A7CE5000887076 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +101,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B31976CB29AA4B11001DA671 /* ApiClientService */ = {
+			isa = PBXGroup;
+			children = (
+				B31976CC29AA4B69001DA671 /* ApiClientService.swift */,
+			);
+			path = ApiClientService;
+			sourceTree = "<group>";
+		};
+		B31976CE29AA4C9F001DA671 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				B31976CF29AA4CBC001DA671 /* ApiClientServiceImp.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		B31976D129AA4DDB001DA671 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				B31976D229AA4E05001DA671 /* ApiError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		B31976D429AA561D001DA671 /* StatusResponse */ = {
+			isa = PBXGroup;
+			children = (
+				B31976D529AA563F001DA671 /* HttpResponseStatus.swift */,
+			);
+			path = StatusResponse;
+			sourceTree = "<group>";
+		};
+		B31976D729AA5BB5001DA671 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				B31976D829AA5BD8001DA671 /* MenuDTO.swift */,
+				B31976DA29AA5D02001DA671 /* MenuDTO+Mapper.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
 		B38C52BD29A7CE5000887076 = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +232,11 @@
 		B38C52FD29A7D03900887076 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B31976D429AA561D001DA671 /* StatusResponse */,
+				B31976D129AA4DDB001DA671 /* Errors */,
+				B31976CE29AA4C9F001DA671 /* Implementations */,
+				B31976CB29AA4B11001DA671 /* ApiClientService */,
+				B31976DE29AA7757001DA671 /* Endpoint.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -305,6 +367,7 @@
 			isa = PBXGroup;
 			children = (
 				B3C9F97629A95EEC007B5919 /* Reusable.swift */,
+				B31976DC29AA5DD2001DA671 /* PropertyIterator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -394,6 +457,7 @@
 		B3C9F97929A96E3F007B5919 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				B31976D729AA5BB5001DA671 /* DTO */,
 				B3C9F98129A971A8007B5919 /* Repositories */,
 			);
 			path = Data;
@@ -563,6 +627,7 @@
 				B38C531929A7DD8300887076 /* Coordinator.swift in Sources */,
 				B3C9F98629A973AA007B5919 /* LoadMenuUseCase.swift in Sources */,
 				B38C52CE29A7CE5000887076 /* HomeMenuViewController.swift in Sources */,
+				B31976D029AA4CBC001DA671 /* ApiClientServiceImp.swift in Sources */,
 				B38C531B29A7DDE300887076 /* AppCoordinator.swift in Sources */,
 				B3C9F97C29A96EA4007B5919 /* MenuRepository.swift in Sources */,
 				B3C9F97729A95EEC007B5919 /* Reusable.swift in Sources */,
@@ -572,11 +637,18 @@
 				B38C532129A7E76800887076 /* HomeFactory.swift in Sources */,
 				B38C531F29A7E6E500887076 /* HomeCoordinator.swift in Sources */,
 				B3C9F97529A93798007B5919 /* UIView+Constraints.swift in Sources */,
+				B31976D329AA4E05001DA671 /* ApiError.swift in Sources */,
 				B3C9F98E29A9793C007B5919 /* ItemHomeMenuViewModel.swift in Sources */,
+				B31976DF29AA7757001DA671 /* Endpoint.swift in Sources */,
+				B31976D629AA563F001DA671 /* HttpResponseStatus.swift in Sources */,
+				B31976DD29AA5DD2001DA671 /* PropertyIterator.swift in Sources */,
 				B3C9F98A29A975D6007B5919 /* HomeMenuViewModel.swift in Sources */,
 				B3C9F98329A971F9007B5919 /* MenuRepositoryImp.swift in Sources */,
+				B31976DB29AA5D02001DA671 /* MenuDTO+Mapper.swift in Sources */,
 				B3C9F97329A93569007B5919 /* ItemHomeMenuCell.swift in Sources */,
 				B38C52CC29A7CE5000887076 /* SceneDelegate.swift in Sources */,
+				B31976CD29AA4B69001DA671 /* ApiClientService.swift in Sources */,
+				B31976D929AA5BD8001DA671 /* MenuDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,7 +20,7 @@ final class ItemHomeMenuCell: UICollectionViewCell {
     private let categoryImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "default")
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         return imageView
     }()
     
