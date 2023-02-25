@@ -5,6 +5,7 @@
 //  Created by Guillermo Moral on 23/02/2023.
 //
 import UIKit
+import Combine
 
 protocol HomeFactory {
     func makeModule()-> UIViewController
@@ -12,13 +13,20 @@ protocol HomeFactory {
 
 struct HomeFactoryImp: HomeFactory {
     func makeModule() -> UIViewController {
-        let homeMenuViewController = HomeMenuViewController(collectionViewLayout: makeLayout())
+        
+        let menuRepository = MenuRepositoryImp()
+        let loadMenuUseCase = LoadMenuUseCaseImp(menuRepository: menuRepository)
+        let state = PassthroughSubject<StateController, Never>()
+        let homeMenuViewModel = HomeMenuViewModelImp(state: state, loadMenuUseCase: loadMenuUseCase)
+        
+        let homeMenuViewController = HomeMenuViewController(viewModel: homeMenuViewModel, layout: makeLayout())
+        
         homeMenuViewController.title = "Challenge"
         
         return homeMenuViewController
     }
     
-    private func makeLayout() -> UICollectionViewLayout {
+    private func makeLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         let layoutWidth = (UIScreen.main.bounds.width  - 20 ) * 0.5
         let layoutHeight = (UIScreen.main.bounds.width - 20) * 0.5

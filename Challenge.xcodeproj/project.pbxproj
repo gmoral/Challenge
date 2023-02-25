@@ -20,7 +20,14 @@
 		B38C532129A7E76800887076 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C532029A7E76800887076 /* HomeFactory.swift */; };
 		B3C9F97329A93569007B5919 /* ItemHomeMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9F97229A93569007B5919 /* ItemHomeMenuCell.swift */; };
 		B3C9F97529A93798007B5919 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9F97429A93798007B5919 /* UIView+Constraints.swift */; };
-		B3C9F97729A95EEC007B5919 /* Ruesable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9F97629A95EEC007B5919 /* Ruesable.swift */; };
+		B3C9F97729A95EEC007B5919 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9F97629A95EEC007B5919 /* Reusable.swift */; };
+		B3C9F97C29A96EA4007B5919 /* MenuRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9F97B29A96EA4007B5919 /* MenuRepository.swift */; };
+		B3C9F98029A970A4007B5919 /* MenuEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9F97F29A970A4007B5919 /* MenuEntity.swift */; };
+		B3C9F98329A971F9007B5919 /* MenuRepositoryImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9F98229A971F9007B5919 /* MenuRepositoryImp.swift */; };
+		B3C9F98629A973AA007B5919 /* LoadMenuUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9F98529A973AA007B5919 /* LoadMenuUseCase.swift */; };
+		B3C9F98A29A975D6007B5919 /* HomeMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9F98929A975D6007B5919 /* HomeMenuViewModel.swift */; };
+		B3C9F98C29A97718007B5919 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9F98B29A97718007B5919 /* StateController.swift */; };
+		B3C9F98E29A9793C007B5919 /* ItemHomeMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9F98D29A9793C007B5919 /* ItemHomeMenuViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +57,14 @@
 		B38C532029A7E76800887076 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		B3C9F97229A93569007B5919 /* ItemHomeMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHomeMenuCell.swift; sourceTree = "<group>"; };
 		B3C9F97429A93798007B5919 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
-		B3C9F97629A95EEC007B5919 /* Ruesable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ruesable.swift; sourceTree = "<group>"; };
+		B3C9F97629A95EEC007B5919 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		B3C9F97B29A96EA4007B5919 /* MenuRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRepository.swift; sourceTree = "<group>"; };
+		B3C9F97F29A970A4007B5919 /* MenuEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuEntity.swift; sourceTree = "<group>"; };
+		B3C9F98229A971F9007B5919 /* MenuRepositoryImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuRepositoryImp.swift; sourceTree = "<group>"; };
+		B3C9F98529A973AA007B5919 /* LoadMenuUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMenuUseCase.swift; sourceTree = "<group>"; };
+		B3C9F98929A975D6007B5919 /* HomeMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuViewModel.swift; sourceTree = "<group>"; };
+		B3C9F98B29A97718007B5919 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
+		B3C9F98D29A9793C007B5919 /* ItemHomeMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHomeMenuViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,7 +166,6 @@
 				B38C530F29A7D28600887076 /* StateController */,
 				B38C530E29A7D27900887076 /* Utils */,
 				B38C530A29A7D21500887076 /* Layer */,
-				B38C530929A7D20300887076 /* Components */,
 				B38C530829A7D1B900887076 /* Constants */,
 				B38C530729A7D19E00887076 /* Extensions */,
 			);
@@ -184,8 +197,9 @@
 		B38C530029A7D07900887076 /* HomeMenu */ = {
 			isa = PBXGroup;
 			children = (
-				B38C52CD29A7CE5000887076 /* HomeMenuViewController.swift */,
-				B3C9F97229A93569007B5919 /* ItemHomeMenuCell.swift */,
+				B3C9F97A29A96E45007B5919 /* Domain */,
+				B3C9F97929A96E3F007B5919 /* Data */,
+				B3C9F97829A96E1A007B5919 /* Presentation */,
 			);
 			path = HomeMenu;
 			sourceTree = "<group>";
@@ -281,6 +295,8 @@
 		B38C530D29A7D24400887076 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B38C530929A7D20300887076 /* Components */,
+				B3C9F98B29A97718007B5919 /* StateController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -288,7 +304,7 @@
 		B38C530E29A7D27900887076 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				B3C9F97629A95EEC007B5919 /* Ruesable.swift */,
+				B3C9F97629A95EEC007B5919 /* Reusable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -364,6 +380,83 @@
 				B38C52CB29A7CE5000887076 /* SceneDelegate.swift */,
 			);
 			path = System;
+			sourceTree = "<group>";
+		};
+		B3C9F97829A96E1A007B5919 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B3C9F98829A975BB007B5919 /* Controller */,
+				B3C9F98729A975B6007B5919 /* Cell */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B3C9F97929A96E3F007B5919 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B3C9F98129A971A8007B5919 /* Repositories */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B3C9F97A29A96E45007B5919 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B3C9F98429A972AE007B5919 /* UseCase */,
+				B3C9F97E29A9706C007B5919 /* Entities */,
+				B3C9F97D29A97055007B5919 /* InterfacesRepositories */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B3C9F97D29A97055007B5919 /* InterfacesRepositories */ = {
+			isa = PBXGroup;
+			children = (
+				B3C9F97B29A96EA4007B5919 /* MenuRepository.swift */,
+			);
+			path = InterfacesRepositories;
+			sourceTree = "<group>";
+		};
+		B3C9F97E29A9706C007B5919 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B3C9F97F29A970A4007B5919 /* MenuEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B3C9F98129A971A8007B5919 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				B3C9F98229A971F9007B5919 /* MenuRepositoryImp.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		B3C9F98429A972AE007B5919 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				B3C9F98529A973AA007B5919 /* LoadMenuUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		B3C9F98729A975B6007B5919 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B3C9F97229A93569007B5919 /* ItemHomeMenuCell.swift */,
+				B3C9F98D29A9793C007B5919 /* ItemHomeMenuViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B3C9F98829A975BB007B5919 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B38C52CD29A7CE5000887076 /* HomeMenuViewController.swift */,
+				B3C9F98929A975D6007B5919 /* HomeMenuViewModel.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,13 +561,20 @@
 			files = (
 				B38C531D29A7DFAA00887076 /* AppFactory.swift in Sources */,
 				B38C531929A7DD8300887076 /* Coordinator.swift in Sources */,
+				B3C9F98629A973AA007B5919 /* LoadMenuUseCase.swift in Sources */,
 				B38C52CE29A7CE5000887076 /* HomeMenuViewController.swift in Sources */,
 				B38C531B29A7DDE300887076 /* AppCoordinator.swift in Sources */,
-				B3C9F97729A95EEC007B5919 /* Ruesable.swift in Sources */,
+				B3C9F97C29A96EA4007B5919 /* MenuRepository.swift in Sources */,
+				B3C9F97729A95EEC007B5919 /* Reusable.swift in Sources */,
+				B3C9F98C29A97718007B5919 /* StateController.swift in Sources */,
+				B3C9F98029A970A4007B5919 /* MenuEntity.swift in Sources */,
 				B38C52CA29A7CE5000887076 /* AppDelegate.swift in Sources */,
 				B38C532129A7E76800887076 /* HomeFactory.swift in Sources */,
 				B38C531F29A7E6E500887076 /* HomeCoordinator.swift in Sources */,
 				B3C9F97529A93798007B5919 /* UIView+Constraints.swift in Sources */,
+				B3C9F98E29A9793C007B5919 /* ItemHomeMenuViewModel.swift in Sources */,
+				B3C9F98A29A975D6007B5919 /* HomeMenuViewModel.swift in Sources */,
+				B3C9F98329A971F9007B5919 /* MenuRepositoryImp.swift in Sources */,
 				B3C9F97329A93569007B5919 /* ItemHomeMenuCell.swift in Sources */,
 				B38C52CC29A7CE5000887076 /* SceneDelegate.swift in Sources */,
 			);
