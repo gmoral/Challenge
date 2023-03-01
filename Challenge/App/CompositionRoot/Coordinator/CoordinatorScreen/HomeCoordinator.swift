@@ -6,6 +6,12 @@
 //
 import UIKit
 
+enum Screen : String {
+    case characters
+    case episodes
+    case locations
+}
+
 final class HomeCoordinator: Coordinator {
     var navigation : UINavigationController
     private let homeFactory: HomeFactory
@@ -23,6 +29,28 @@ final class HomeCoordinator: Coordinator {
 
 extension HomeCoordinator : HomeMenuViewControllerCoordinator {
     func didSelectMenuCell(model: MenuEntity) {
-        print("is going to another screen")
+        switch model.title {
+            
+        case Screen.characters.rawValue:
+            goToCharacters()
+        case Screen.episodes.rawValue:
+            goToEpisodes()
+        case Screen.locations.rawValue :
+            goToLocation()
+        default:
+            break
+        }
+    }
+    
+    private func goToCharacters() {
+        print("got to characters")
+    }
+    
+    private func goToEpisodes() {
+        print("got to episodes")
+    }
+    
+    private func goToLocation() {
+        print("got to location")
     }
 }
