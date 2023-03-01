@@ -37,6 +37,7 @@
 		B3C9F98A29A975D6007B5919 /* HomeMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9F98929A975D6007B5919 /* HomeMenuViewModel.swift */; };
 		B3C9F98C29A97718007B5919 /* StateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9F98B29A97718007B5919 /* StateController.swift */; };
 		B3C9F98E29A9793C007B5919 /* ItemHomeMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9F98D29A9793C007B5919 /* ItemHomeMenuViewModel.swift */; };
+		B3F9263529AFB1E800764C41 /* MessageDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F9263429AFB1E800764C41 /* MessageDisplayable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		B3C9F98929A975D6007B5919 /* HomeMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMenuViewModel.swift; sourceTree = "<group>"; };
 		B3C9F98B29A97718007B5919 /* StateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateController.swift; sourceTree = "<group>"; };
 		B3C9F98D29A9793C007B5919 /* ItemHomeMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHomeMenuViewModel.swift; sourceTree = "<group>"; };
+		B3F9263429AFB1E800764C41 /* MessageDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDisplayable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				B31976E129AAB427001DA671 /* SpinnerDisplayable.swift */,
+				B3F9263429AFB1E800764C41 /* MessageDisplayable.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 			files = (
 				B38C531D29A7DFAA00887076 /* AppFactory.swift in Sources */,
 				B38C531929A7DD8300887076 /* Coordinator.swift in Sources */,
+				B3F9263529AFB1E800764C41 /* MessageDisplayable.swift in Sources */,
 				B3C9F98629A973AA007B5919 /* LoadMenuUseCase.swift in Sources */,
 				B38C52CE29A7CE5000887076 /* HomeMenuViewController.swift in Sources */,
 				B31976D029AA4CBC001DA671 /* ApiClientServiceImp.swift in Sources */,

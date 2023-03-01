@@ -39,12 +39,12 @@ final class HomeMenuViewController: UICollectionViewController {
                 switch state {
                     
                 case .success:
-                    //self.hideSpinner()
+                    self.hideSpinner()
                     self.collectionView.reloadData()
                 case .loading:
                     self.showSpinner()
                 case .fail(error: let error):
-                    self.hideSpinner()
+                    self.presentAlert(message: error, Title: "Error")
                 }
             }.store(in: &cancellable)
     }
@@ -83,3 +83,5 @@ extension HomeMenuViewController {
 }
 
 extension HomeMenuViewController : SpinnerDisplayable { }
+
+extension HomeMenuViewController : MessageDisplayable { }
