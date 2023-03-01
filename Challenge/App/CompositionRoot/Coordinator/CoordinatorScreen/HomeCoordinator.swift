@@ -16,7 +16,13 @@ final class HomeCoordinator: Coordinator {
     }
     
     func start() {
-        let controller = homeFactory.makeModule()
+        let controller = homeFactory.makeModule(coordinator: self)
         navigation.pushViewController(controller, animated: true)
+    }
+}
+
+extension HomeCoordinator : HomeMenuViewControllerCoordinator {
+    func didSelectMenuCell(model: MenuEntity) {
+        print("is going to another screen")
     }
 }
