@@ -19,9 +19,9 @@ extension SpinnerDisplayable where Self : UIViewController {
         
         let containerView = UIView()
         view.addSubview(containerView)
-        containerView.tag = tagIdentifier
+        containerView.tag = ViewValues.tagIdentifierSpinner
         containerView.fillSuperView(widthPadding: 0)
-        containerView.backgroundColor = UIColor.red.withAlphaComponent(opacity)
+        containerView.backgroundColor = UIColor.red.withAlphaComponent(ViewValues.opacityContainerSpinner)
         
         addSpinnerIndicatorToContainer(containerView: containerView)
     }
@@ -34,21 +34,13 @@ extension SpinnerDisplayable where Self : UIViewController {
     }
     
     func hideSpinner() {
-        if let foundView = view.viewWithTag(tagIdentifier) {
+        if let foundView = view.viewWithTag(ViewValues.tagIdentifierSpinner) {
             foundView.removeFromSuperview()
         }
     }
     
     private var doesNotExistAnotherSpinner: Bool {
-        view.viewWithTag(tagIdentifier) == nil
-    }
-    
-    private var tagIdentifier: Int {
-        100
-    }
-    
-    private var opacity: CGFloat {
-        0.5
+        view.viewWithTag(ViewValues.tagIdentifierSpinner) == nil
     }
 }
 

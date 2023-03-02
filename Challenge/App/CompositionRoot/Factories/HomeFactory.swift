@@ -23,19 +23,19 @@ struct HomeFactoryImp: HomeFactory {
         
         let homeMenuViewController = HomeMenuViewController(viewModel: homeMenuViewModel, layout: makeLayout(), coordinator: coordinator)
         
-        homeMenuViewController.title = "Challenge"
+        homeMenuViewController.title = AppLocalized.appName
         
         return homeMenuViewController
     }
     
     private func makeLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
-        let layoutWidth = (UIScreen.main.bounds.width  - 20 ) * 0.5
-        let layoutHeight = (UIScreen.main.bounds.width - 20) * 0.5
+        let layoutWidth = (ViewValues.widthScreen  - ViewValues.doublePadding) *  ViewValues.multiplier
+        let layoutHeight = (ViewValues.widthScreen  - ViewValues.doublePadding) * ViewValues.multiplier
         layout.itemSize = CGSize(width: layoutWidth, height: layoutHeight)
         layout.minimumLineSpacing = .zero
         layout.minimumInteritemSpacing = .zero
-        layout.sectionInset = UIEdgeInsets(top: .zero, left: 10, bottom: .zero, right: 10)
+        layout.sectionInset = UIEdgeInsets(top: .zero, left: ViewValues.normalPadding, bottom: .zero, right: ViewValues.normalPadding)
         return layout
     }
     
