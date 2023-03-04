@@ -6,50 +6,44 @@
 //
 import UIKit
 
-enum Screen : String {
+enum Screen: String {
     case characters
     case episodes
     case locations
 }
 
 final class HomeCoordinator: Coordinator {
-    var navigation : UINavigationController
+    var navigation: UINavigationController
     private let homeFactory: HomeFactory
-    
-    init(navigation : UINavigationController, homeFactory: HomeFactory) {
+    init(navigation: UINavigationController, homeFactory: HomeFactory) {
         self.navigation = navigation
         self.homeFactory = homeFactory
     }
-    
     func start() {
         let controller = homeFactory.makeModule(coordinator: self)
         navigation.pushViewController(controller, animated: true)
     }
 }
 
-extension HomeCoordinator : HomeMenuViewControllerCoordinator {
+extension HomeCoordinator: HomeMenuViewControllerCoordinator {
     func didSelectMenuCell(model: MenuEntity) {
         switch model.title {
-            
         case Screen.characters.rawValue:
             goToCharacters()
         case Screen.episodes.rawValue:
             goToEpisodes()
-        case Screen.locations.rawValue :
+        case Screen.locations.rawValue:
             goToLocation()
         default:
             break
         }
     }
-    
     private func goToCharacters() {
         print("got to characters")
     }
-    
     private func goToEpisodes() {
         print("got to episodes")
     }
-    
     private func goToLocation() {
         print("got to location")
     }

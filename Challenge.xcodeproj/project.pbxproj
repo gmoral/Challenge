@@ -16,6 +16,9 @@
 		B31976DD29AA5DD2001DA671 /* PropertyIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31976DC29AA5DD2001DA671 /* PropertyIterator.swift */; };
 		B31976DF29AA7757001DA671 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31976DE29AA7757001DA671 /* Endpoint.swift */; };
 		B31976E229AAB427001DA671 /* SpinnerDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31976E129AAB427001DA671 /* SpinnerDisplayable.swift */; };
+		B38C259629B23A1A00C782AC /* CharacterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C259529B23A1A00C782AC /* CharacterFactory.swift */; };
+		B38C259929B26A9200C782AC /* CharacterViewCoordinatorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C259829B26A9200C782AC /* CharacterViewCoordinatorController.swift */; };
+		B38C259B29B26F2500C782AC /* CharacterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C259A29B26F2500C782AC /* CharacterCoordinator.swift */; };
 		B38C52CA29A7CE5000887076 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C52C929A7CE5000887076 /* AppDelegate.swift */; };
 		B38C52CC29A7CE5000887076 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C52CB29A7CE5000887076 /* SceneDelegate.swift */; };
 		B38C52CE29A7CE5000887076 /* HomeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C52CD29A7CE5000887076 /* HomeMenuViewController.swift */; };
@@ -62,6 +65,9 @@
 		B31976DC29AA5DD2001DA671 /* PropertyIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyIterator.swift; sourceTree = "<group>"; };
 		B31976DE29AA7757001DA671 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		B31976E129AAB427001DA671 /* SpinnerDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerDisplayable.swift; sourceTree = "<group>"; };
+		B38C259529B23A1A00C782AC /* CharacterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFactory.swift; sourceTree = "<group>"; };
+		B38C259829B26A9200C782AC /* CharacterViewCoordinatorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewCoordinatorController.swift; sourceTree = "<group>"; };
+		B38C259A29B26F2500C782AC /* CharacterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCoordinator.swift; sourceTree = "<group>"; };
 		B38C52C629A7CE5000887076 /* Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38C52C929A7CE5000887076 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B38C52CB29A7CE5000887076 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +163,14 @@
 				B3F9263429AFB1E800764C41 /* MessageDisplayable.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		B38C259729B26A7300C782AC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B38C259829B26A9200C782AC /* CharacterViewCoordinatorController.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		B38C52BD29A7CE5000887076 = {
@@ -287,6 +301,7 @@
 		B38C530129A7D0AE00887076 /* Characters */ = {
 			isa = PBXGroup;
 			children = (
+				B38C259729B26A7300C782AC /* Presentation */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -428,6 +443,7 @@
 			isa = PBXGroup;
 			children = (
 				B38C531E29A7E6E500887076 /* HomeCoordinator.swift */,
+				B38C259A29B26F2500C782AC /* CharacterCoordinator.swift */,
 			);
 			path = CoordinatorScreen;
 			sourceTree = "<group>";
@@ -437,6 +453,7 @@
 			children = (
 				B38C531C29A7DFAA00887076 /* AppFactory.swift */,
 				B38C532029A7E76800887076 /* HomeFactory.swift */,
+				B38C259529B23A1A00C782AC /* CharacterFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -550,6 +567,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B38C52F029A7CE5100887076 /* Build configuration list for PBXNativeTarget "Challenge" */;
 			buildPhases = (
+				B3BAFBE229B3781400ECFAA7 /* Swiftlint */,
 				B38C52C229A7CE5000887076 /* Sources */,
 				B38C52C329A7CE5000887076 /* Frameworks */,
 				B38C52C429A7CE5000887076 /* Resources */,
@@ -638,6 +656,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B3BAFBE229B3781400ECFAA7 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B38C52C229A7CE5000887076 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -648,6 +687,7 @@
 				B3F9263929AFE20700764C41 /* ViewValues.swift in Sources */,
 				B3F9263529AFB1E800764C41 /* MessageDisplayable.swift in Sources */,
 				B3C9F98629A973AA007B5919 /* LoadMenuUseCase.swift in Sources */,
+				B38C259B29B26F2500C782AC /* CharacterCoordinator.swift in Sources */,
 				B38C52CE29A7CE5000887076 /* HomeMenuViewController.swift in Sources */,
 				B31976D029AA4CBC001DA671 /* ApiClientServiceImp.swift in Sources */,
 				B38C531B29A7DDE300887076 /* AppCoordinator.swift in Sources */,
@@ -657,10 +697,12 @@
 				B3C9F98C29A97718007B5919 /* StateController.swift in Sources */,
 				B31976E229AAB427001DA671 /* SpinnerDisplayable.swift in Sources */,
 				B3C9F98029A970A4007B5919 /* MenuEntity.swift in Sources */,
+				B38C259629B23A1A00C782AC /* CharacterFactory.swift in Sources */,
 				B38C52CA29A7CE5000887076 /* AppDelegate.swift in Sources */,
 				B38C532129A7E76800887076 /* HomeFactory.swift in Sources */,
 				B38C531F29A7E6E500887076 /* HomeCoordinator.swift in Sources */,
 				B3C9F97529A93798007B5919 /* UIView+Constraints.swift in Sources */,
+				B38C259929B26A9200C782AC /* CharacterViewCoordinatorController.swift in Sources */,
 				B31976D329AA4E05001DA671 /* ApiError.swift in Sources */,
 				B3C9F98E29A9793C007B5919 /* ItemHomeMenuViewModel.swift in Sources */,
 				B31976DF29AA7757001DA671 /* Endpoint.swift in Sources */,

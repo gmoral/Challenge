@@ -8,26 +8,22 @@ import UIKit
 import Combine
 
 protocol HomeFactory {
-    func makeModule(coordinator: HomeMenuViewControllerCoordinator)-> UIViewController
+    func makeModule(coordinator: HomeMenuViewControllerCoordinator) -> UIViewController
 }
 
 struct HomeFactoryImp: HomeFactory {
-    
     func makeModule(coordinator: HomeMenuViewControllerCoordinator) -> UIViewController {
         let apiClientService = ApiClientServiceImp()
-        
         let menuRepository = MenuRepositoryImp(apiClientService: apiClientService, urlList: Endpoint.baseUrl)
         let loadMenuUseCase = LoadMenuUseCaseImp(menuRepository: menuRepository)
         let state = PassthroughSubject<StateController, Never>()
         let homeMenuViewModel = HomeMenuViewModelImp(state: state, loadMenuUseCase: loadMenuUseCase)
-        
-        let homeMenuViewController = HomeMenuViewController(viewModel: homeMenuViewModel, layout: makeLayout(), coordinator: coordinator)
-        
+        let homeMenuViewController = HomeMenuViewController(viewModel: homeMenuViewModel,
+                                                            layout: makeLayout(),
+                                                            coordinator: coordinator)
         homeMenuViewController.title = AppLocalized.appName
-        
         return homeMenuViewController
     }
-    
     private func makeLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         let layoutWidth = (ViewValues.widthScreen  - ViewValues.doublePadding) *  ViewValues.multiplier
@@ -35,8 +31,9 @@ struct HomeFactoryImp: HomeFactory {
         layout.itemSize = CGSize(width: layoutWidth, height: layoutHeight)
         layout.minimumLineSpacing = .zero
         layout.minimumInteritemSpacing = .zero
-        layout.sectionInset = UIEdgeInsets(top: .zero, left: ViewValues.normalPadding, bottom: .zero, right: ViewValues.normalPadding)
+        layout.sectionInset = UIEdgeInsets(top: .zero, left: ViewValues.normalPadding,
+                                           bottom: .zero,
+                                           right: ViewValues.normalPadding)
         return layout
     }
-    
 }

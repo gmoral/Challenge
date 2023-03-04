@@ -9,5 +9,5 @@ struct AppLocalized {
     static let error = "Error"
     static let appName = "Challenge"
     static let category = "Category"
-    static let oKButton : String = "Ok"
+    static let oKButton: String = "Ok"
 }
