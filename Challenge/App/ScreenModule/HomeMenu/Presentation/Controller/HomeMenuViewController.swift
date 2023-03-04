@@ -61,23 +61,21 @@ final class HomeMenuViewController: UICollectionViewController {
 }
 
 extension HomeMenuViewController {
-override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+override func collectionView(_ collectionView: UICollectionView,
+                             cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: ItemHomeMenuCell.reuseIdentifier,
                 for: indexPath) as? ItemHomeMenuCell
         else {
             return UICollectionViewCell()
-            
         }
-        
         let viewModelCell = viewModel.getItemMenuViewModel(indexPath: indexPath)
         cell.configData(viewModel: viewModelCell)
-        
         return cell
     }
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView,
+                                 numberOfItemsInSection section: Int) -> Int {
         viewModel.menuItemCount
     }
 }
@@ -88,11 +86,10 @@ extension HomeMenuViewController {
         didSelectItemAt indexPath: IndexPath
     ) {
         let model = viewModel.getMenuEntity(indexPath: indexPath)
-        
         self.coordinator?.didSelectMenuCell(model: model)
     }
 }
 
-extension HomeMenuViewController : SpinnerDisplayable { }
+extension HomeMenuViewController: SpinnerDisplayable { }
 
-extension HomeMenuViewController : MessageDisplayable { }
+extension HomeMenuViewController: MessageDisplayable { }

@@ -8,7 +8,4 @@
 import XCTest
 @testable import Challenge
 
-final class ChallengeTests: XCTestCase {
-
-
-}
+final class ChallengeTests: XCTestCase { }

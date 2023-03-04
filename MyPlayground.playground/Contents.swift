@@ -40,11 +40,9 @@ array.append(checkFuzz)
 
 for value in 1...20 {
     var isFizzFuzz = false
-    for check in a {
-        if check.check(value: value) {
-            check.action()
-            isFizzFuzz = true
-        }
+    for check in a  where check.check(value: value) {
+        check.action()
+        isFizzFuzz = true
     }
     if !isFizzFuzz {
         print("\(value)")

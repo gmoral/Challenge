@@ -10,9 +10,7 @@ extension MenuDTO {
         return self.dictionaryProperty().map { dictionary in
             let title = dictionary.key
             let url: String = (dictionary.value as? String) ?? String()
-            
             return MenuEntity(title: title, url: url)
         }
-        
     }
 }

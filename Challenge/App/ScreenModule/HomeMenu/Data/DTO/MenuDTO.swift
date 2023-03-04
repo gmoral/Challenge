@@ -11,6 +11,4 @@ struct MenuDTO: Decodable {
     let episodes: String
 }
 
-extension MenuDTO: PropertyIterator {
-    
-}
+extension MenuDTO: PropertyIterator { }
