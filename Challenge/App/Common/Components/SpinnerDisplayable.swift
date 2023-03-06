@@ -25,7 +25,7 @@ extension SpinnerDisplayable where Self: UIViewController {
     private func addSpinnerIndicatorToContainer(containerView: UIView) {
         let spinner = UIActivityIndicatorView()
         containerView.addSubview(spinner)
-        spinner.setCenterConstraints(parent: containerView)
+        spinner.centerXY()
         spinner.startAnimating()
     }
     func hideSpinner() {

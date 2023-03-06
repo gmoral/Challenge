@@ -43,13 +43,31 @@ extension UIView {
                        pBottom: widthPadding,
                        pLeft: widthPadding)
     }
-    func setCenterConstraints(
-        parent: UIView? = nil
-    ) {
+    
+    func centerY() {
+        guard let superview = self.superview else { return }
         translatesAutoresizingMaskIntoConstraints = false
-        if let parent = parent {
-            centerXAnchor.constraint(equalTo: parent.centerXAnchor).isActive = true
-            centerYAnchor.constraint(equalTo: parent.centerYAnchor).isActive = true
-        }
+        centerYAnchor.constraint(equalTo: superview.centerYAnchor).isActive = true
+    }
+    
+    func centerX() {
+        guard let superview = self.superview else { return }
+        translatesAutoresizingMaskIntoConstraints = false
+        centerXAnchor.constraint(equalTo: superview.centerXAnchor).isActive = true
+    }
+    
+    func centerXY() {
+        centerY()
+        centerX()
+    }
+    
+    func setHeightConstraint(with height: CGFloat) {
+        translatesAutoresizingMaskIntoConstraints = false
+        heightAnchor.constraint(equalToConstant: height).isActive = true
+    }
+    
+    func setWidthConstraint(with width: CGFloat) {
+        translatesAutoresizingMaskIntoConstraints = false
+        widthAnchor.constraint(equalToConstant: width).isActive = true
     }
 }
