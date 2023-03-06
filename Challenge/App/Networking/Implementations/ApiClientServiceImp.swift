@@ -24,7 +24,7 @@ struct ApiClientServiceImp: ApiClientService {
         guard let httpResponse = request.httpResponse as? HTTPURLResponse
         else { throw ApiError.unknowError }
         switch httpResponse.statusCode {
-        case HttpResponseStatus.ok:
+        case HttpResponseStatus.dataok:
             return try decodeModel(data: request.data)
         case HttpResponseStatus.clientError:
             throw ApiError.clientError
