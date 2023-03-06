@@ -16,6 +16,7 @@ final class HomeMenuViewController: UICollectionViewController {
     private let viewModel: HomeMenuViewModel
     private var cancellable = Set<AnyCancellable>()
     private weak var coordinator: HomeMenuViewControllerCoordinator?
+    
     init(
         viewModel: HomeMenuViewModel,
         layout: UICollectionViewFlowLayout,
@@ -25,9 +26,11 @@ final class HomeMenuViewController: UICollectionViewController {
         self.coordinator = coordinator
         super.init(collectionViewLayout: layout)
     }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
@@ -35,6 +38,7 @@ final class HomeMenuViewController: UICollectionViewController {
         stateController()
         viewModel.viewDidLoad()
     }
+    
     private func stateController() {
         viewModel
             .state
@@ -51,9 +55,11 @@ final class HomeMenuViewController: UICollectionViewController {
                 }
             }.store(in: &cancellable)
     }
+    
     private func configUI() {
         view.backgroundColor = .systemBackground
     }
+    
     private func configCollectionView() {
         print(ItemHomeMenuCell.reuseIdentifier)
         collectionView.register(ItemHomeMenuCell.self, forCellWithReuseIdentifier: ItemHomeMenuCell.reuseIdentifier)
