@@ -8,18 +8,24 @@
 import UIKit
 
 final class CharacterCoordinator: Coordinator {
+    
     var navigation: UINavigationController
     private var characterFactory: CharacterFactory
+    
     init(navigation: UINavigationController, characterFactory: CharacterFactory) {
         self.navigation = navigation
         self.characterFactory = characterFactory
     }
+    
     func start() {
         let controller = characterFactory.makeModule(coordinator: self)
+        navigation.navigationController?.navigationBar.prefersLargeTitles = true
+        navigation.pushViewController(controller, animated: true)
     }
 }
 
 extension CharacterCoordinator: CharacterViewControllerCoordinator {
+    
     func didSelectMenuCell(urlDetail: String) {
         print("navigate to detail")
     }

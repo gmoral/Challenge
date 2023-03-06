@@ -9,9 +9,11 @@ import Combine
 
 protocol HomeFactory {
     func makeModule(coordinator: HomeMenuViewControllerCoordinator) -> UIViewController
+    func makeCoordinatorCharacters(navigation: UINavigationController, urlList: String) -> Coordinator
 }
 
 struct HomeFactoryImp: HomeFactory {
+    
     func makeModule(coordinator: HomeMenuViewControllerCoordinator) -> UIViewController {
         let apiClientService = ApiClientServiceImp()
         let menuRepository = MenuRepositoryImp(apiClientService: apiClientService, urlList: Endpoint.baseUrl)
@@ -24,6 +26,7 @@ struct HomeFactoryImp: HomeFactory {
         homeMenuViewController.title = AppLocalized.appName
         return homeMenuViewController
     }
+    
     private func makeLayout() -> UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         let layoutWidth = (ViewValues.widthScreen  - ViewValues.doublePadding) *  ViewValues.multiplier
@@ -35,5 +38,11 @@ struct HomeFactoryImp: HomeFactory {
                                            bottom: .zero,
                                            right: ViewValues.normalPadding)
         return layout
+    }
+    
+    func makeCoordinatorCharacters(navigation: UINavigationController, urlList: String) -> Coordinator {
+        let characterFactory = CharactersFactoryImp()
+        let characterCoordinator = CharacterCoordinator(navigation: navigation, characterFactory: characterFactory)
+        return characterCoordinator
     }
 }

@@ -13,6 +13,7 @@ protocol CharacterFactory {
 struct CharactersFactoryImp: CharacterFactory {
     func makeModule(coordinator: CharacterViewControllerCoordinator) -> UIViewController {
         let controller = CharacterViewController()
+        controller.title = "Characters"
         return controller
     }
 }
