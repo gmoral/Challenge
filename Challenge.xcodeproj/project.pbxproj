@@ -30,6 +30,7 @@
 		B38C531D29A7DFAA00887076 /* AppFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C531C29A7DFAA00887076 /* AppFactory.swift */; };
 		B38C531F29A7E6E500887076 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C531E29A7E6E500887076 /* HomeCoordinator.swift */; };
 		B38C532129A7E76800887076 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C532029A7E76800887076 /* HomeFactory.swift */; };
+		B3C9F81629B8BEF60038DA6D /* LastPageValidationUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9F81529B8BEF60038DA6D /* LastPageValidationUseCase.swift */; };
 		B3C9F97329A93569007B5919 /* ItemHomeMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9F97229A93569007B5919 /* ItemHomeMenuCell.swift */; };
 		B3C9F97529A93798007B5919 /* UIView+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9F97429A93798007B5919 /* UIView+Constraints.swift */; };
 		B3C9F97729A95EEC007B5919 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C9F97629A95EEC007B5919 /* Reusable.swift */; };
@@ -103,6 +104,7 @@
 		B38C531C29A7DFAA00887076 /* AppFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFactory.swift; sourceTree = "<group>"; };
 		B38C531E29A7E6E500887076 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		B38C532029A7E76800887076 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
+		B3C9F81529B8BEF60038DA6D /* LastPageValidationUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastPageValidationUseCase.swift; sourceTree = "<group>"; };
 		B3C9F97229A93569007B5919 /* ItemHomeMenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemHomeMenuCell.swift; sourceTree = "<group>"; };
 		B3C9F97429A93798007B5919 /* UIView+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints.swift"; sourceTree = "<group>"; };
 		B3C9F97629A95EEC007B5919 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
@@ -691,6 +693,7 @@
 			isa = PBXGroup;
 			children = (
 				B3D43BF829B681AD00F27FFA /* LoadCharacterUseCase.swift */,
+				B3C9F81529B8BEF60038DA6D /* LastPageValidationUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -848,6 +851,7 @@
 				B3D43BE429B66F0700F27FFA /* CharacterDTO.swift in Sources */,
 				B3D43BD429B6643300F27FFA /* Character.swift in Sources */,
 				B3F9263929AFE20700764C41 /* ViewValues.swift in Sources */,
+				B3C9F81629B8BEF60038DA6D /* LastPageValidationUseCase.swift in Sources */,
 				B3D43BEF29B6740600F27FFA /* CharactersRepository.swift in Sources */,
 				B3F9263529AFB1E800764C41 /* MessageDisplayable.swift in Sources */,
 				B3C9F98629A973AA007B5919 /* LoadMenuUseCase.swift in Sources */,

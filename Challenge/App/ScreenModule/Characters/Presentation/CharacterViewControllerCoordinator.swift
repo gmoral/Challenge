@@ -13,16 +13,9 @@ protocol CharacterViewControllerCoordinator {
 }
 
 final class CharacterViewController: UITableViewController {
-    
     private let viewModel: CharacterViewModel
     private var cancellable = Set<AnyCancellable>()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        viewModel.viewDidLoad()
-        configTableView()
-        
-    }
     
     init(viewModel: CharacterViewModel) {
         self.viewModel = viewModel
@@ -33,22 +26,10 @@ final class CharacterViewController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func stateController() {
-        viewModel.state
-            .receive(on: RunLoop.main)
-            .sink { [weak self] state in
-                switch state {
-                    
-                case .success:
-                    self?.tableView.reloadData()
-                case .loading:
-                    break
-                case .fail(error: let error):
-                    print("Error here", error)
-                    
-                }
-            }.store(in: &cancellable)
-        
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        viewModel.viewDidLoad()
+        configTableView()
     }
     
     private func configTableView() {
@@ -58,6 +39,23 @@ final class CharacterViewController: UITableViewController {
             forCellReuseIdentifier: ItemCharacterTableViewCell.reuseIdentifier)
         addSpinnerLastCell()
     }
+    
+    private func stateController() {
+        viewModel.state
+            .receive(on: RunLoop.main)
+            .sink { [weak self] state in
+                switch state {
+                case .success:
+                    self?.tableView.reloadData()
+                case .loading:
+                    break
+                case .fail(error: let error):
+                    self?.presentAlert(message: error, title: AppLocalized.error)
+                }
+            }.store(in: &cancellable)
+    }
+    
+    
 }
 
 // MARK: - TableViewDataSource
@@ -82,9 +80,7 @@ extension CharacterViewController {
         willDisplay cell: UITableViewCell,
         forRowAt indexPath: IndexPath) {
             if !viewModel.lastPage {
-                tableView.tableFooterView?.isHidden = false
-            }else {
-                tableView.tableFooterView?.isHidden = true
+                tableView.tableFooterView?.isHidden = viewModel.lastPage
             }
     }
     
@@ -94,3 +90,5 @@ extension CharacterViewController {
             viewModel.itemCharacterCount
     }
 }
+
+extension CharacterViewController : MessageDisplayable { }

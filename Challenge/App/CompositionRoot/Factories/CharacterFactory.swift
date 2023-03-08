@@ -14,17 +14,21 @@ protocol CharacterFactory {
 struct CharactersFactoryImp: CharacterFactory {
     let urlList: String
     func makeModule(coordinator: CharacterViewControllerCoordinator) -> UIViewController {
-        
         let state = PassthroughSubject<StateController, Never>()
-        
         let apiClient = ApiClientServiceImp()
         let characterRepository = CharacterRepositoryImp(apiClient: apiClient)
-        let loadCharacterUseCase = LoadCharactersUseCaseImp(characterRepository: characterRepository , url: urlList)
-        let viewModel = CharacterViewModelImp(loadCharacterUseCase: loadCharacterUseCase, state: state)
-        
+        let loadCharacterUseCase = LoadCharactersUseCaseImp(
+            characterRepository: characterRepository,
+            url: urlList)
+        let lastPageValidationUseCase = LastPageValidationUseCaseImp()
+        let viewModel = CharacterViewModelImp(
+            loadCharacterUseCase: loadCharacterUseCase,
+            state: state,
+            lastPageValidationUseCase: lastPageValidationUseCase)
         let controller = CharacterViewController(viewModel: viewModel)
-        
         controller.title = "Characters"
         return controller
     }
 }
+
+// "https://rickandmortyapi.com/api/character/?page=41"
