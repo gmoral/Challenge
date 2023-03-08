@@ -9,15 +9,17 @@ import UIKit
 import Combine
 
 protocol CharacterViewControllerCoordinator {
-    func didSelectMenuCell(urlDetail: String)
+    func didSelectCell(urlDetail: String)
 }
 
 final class CharacterViewController: UITableViewController {
     private let viewModel: CharacterViewModel
     private var cancellable = Set<AnyCancellable>()
+    private var coordinator: CharacterViewControllerCoordinator
 
-    init(viewModel: CharacterViewModel) {
+    init(viewModel: CharacterViewModel, coordinator: CharacterViewControllerCoordinator) {
         self.viewModel = viewModel
+        self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -86,6 +88,18 @@ extension CharacterViewController {
         _ tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int {
             viewModel.itemCharacterCount
+    }
+}
+
+extension CharacterViewController {
+
+    override func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath
+    ) {
+        let row = indexPath.row
+        let urlDetail = viewModel.getUrlDetail(row: row)
+        coordinator.didSelectCell(urlDetail: urlDetail)
     }
 }
 
