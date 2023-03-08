@@ -8,6 +8,7 @@
 import UIKit
 
 final class ItemHomeMenuCell: UICollectionViewCell {
+
     private let mainContainer: UIView = {
         let view = UIView()
         view.backgroundColor = .systemBackground
@@ -15,12 +16,14 @@ final class ItemHomeMenuCell: UICollectionViewCell {
         view.layer.masksToBounds = true
         return view
     }()
+
     private let categoryImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "default")
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
+
     private let titleCategoryLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
@@ -28,13 +31,16 @@ final class ItemHomeMenuCell: UICollectionViewCell {
         label.font = UIFont.preferredFont(forTextStyle: .headline)
         return label
     }()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         configUI()
     }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+
     private func configUI() {
         addSubview(mainContainer)
         mainContainer.fillSuperView(widthPadding: ViewValues.normalPadding)
@@ -49,6 +55,7 @@ final class ItemHomeMenuCell: UICollectionViewCell {
                                           pBottom: ViewValues.normalPadding,
                                           pLeft: ViewValues.normalPadding)
     }
+
     private func configGradientForTitle() {
         let gradientMaskLayer = CAGradientLayer()
         gradientMaskLayer.frame = self.bounds
@@ -56,6 +63,7 @@ final class ItemHomeMenuCell: UICollectionViewCell {
         gradientMaskLayer.locations = [ViewValues.gradientTitleInit, ViewValues.gradientTitleEnd]
         mainContainer.layer.addSublayer(gradientMaskLayer)
     }
+    
     public func configData(viewModel: ItemHomeMenuViewModel) {
         titleCategoryLabel.text = viewModel.title
         categoryImageView.image = UIImage(named: viewModel.title.lowercased())

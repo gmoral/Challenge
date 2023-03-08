@@ -13,12 +13,15 @@ enum Screen: String {
 }
 
 final class HomeCoordinator: Coordinator {
+
     var navigation: UINavigationController
     private let homeFactory: HomeFactory
+
     init(navigation: UINavigationController, homeFactory: HomeFactory) {
         self.navigation = navigation
         self.homeFactory = homeFactory
     }
+
     func start() {
         let controller = homeFactory.makeModule(coordinator: self)
         navigation.pushViewController(controller, animated: true)
@@ -26,6 +29,7 @@ final class HomeCoordinator: Coordinator {
 }
 
 extension HomeCoordinator: HomeMenuViewControllerCoordinator {
+
     func didSelectMenuCell(model: MenuEntity) {
         switch model.title {
         case Screen.characters.rawValue:
@@ -40,6 +44,7 @@ extension HomeCoordinator: HomeMenuViewControllerCoordinator {
     }
     
     private func goToCharacters(urlList: String) {
+        
         let coordinator = homeFactory.makeCoordinatorCharacters(
             navigation: navigation,
             urlList: urlList)

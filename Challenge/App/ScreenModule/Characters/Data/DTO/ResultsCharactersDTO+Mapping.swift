@@ -6,7 +6,7 @@
 //
 
 extension ResultsCharactersDTO {
-    func toDomain() -> (info: Info, character:[Character]) {
+    func toDomain() -> (info: Info, character: [Character]) {
         let characterModel = results.map {
             let statusCharacter = StatusCharacter(status: $0.status)
             let specie = Specie(specie: $0.species)

@@ -80,6 +80,7 @@ override func collectionView(_ collectionView: UICollectionView,
         cell.configData(viewModel: viewModelCell)
         return cell
     }
+
     override func collectionView(_ collectionView: UICollectionView,
                                  numberOfItemsInSection section: Int) -> Int {
         viewModel.menuItemCount
@@ -87,6 +88,7 @@ override func collectionView(_ collectionView: UICollectionView,
 }
 
 extension HomeMenuViewController {
+    
     override func collectionView(
         _ collectionView: UICollectionView,
         didSelectItemAt indexPath: IndexPath

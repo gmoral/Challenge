@@ -7,7 +7,7 @@
 
 import Combine
 
-protocol CharacterViewModel:  BaseViewModel {
+protocol CharacterViewModel: BaseViewModel {
     var itemCharacterCount: Int { get }
     var lastPage: Bool { get }
     func getItemMenuViewModel(row: Int) -> ItemCharacterViewModel
@@ -29,17 +29,18 @@ final class CharacterViewModelImp: CharacterViewModel {
     private var characters: [Character] = []
     private let loadCharacterUseCase: LoadCharactersUseCase
     private var lastPageValidationUseCase: LastPageValidationUseCase
-    
-    
+    private var imageDataUseCase: ImageDataUseCase
     
     init(
         loadCharacterUseCase: LoadCharactersUseCase,
         state: PassthroughSubject<StateController, Never>,
-        lastPageValidationUseCase: LastPageValidationUseCase
+        lastPageValidationUseCase: LastPageValidationUseCase,
+        imageDataUseCase: ImageDataUseCase
     ) {
         self.loadCharacterUseCase = loadCharacterUseCase
         self.state = state
         self.lastPageValidationUseCase = lastPageValidationUseCase
+        self.imageDataUseCase = imageDataUseCase
     }
     
     func viewDidLoad() {
@@ -79,7 +80,9 @@ final class CharacterViewModelImp: CharacterViewModel {
     
     private func makeItemCharacterViewModel(row: Int) -> ItemCharacterViewModel {
         let character = characters[row]
-        return ItemCharacterViewModel(character: character)
+        return ItemCharacterViewModel(
+            character: character,
+            dataImageUseCase: imageDataUseCase)
     }
     
     func getUrlList(row: Int) -> String {

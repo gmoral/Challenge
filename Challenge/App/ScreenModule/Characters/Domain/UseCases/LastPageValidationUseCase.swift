@@ -5,7 +5,6 @@
 //  Created by Guillermo Moral on 08/03/2023.
 //
 
-
 protocol LastPageValidationUseCase {
     var lastPage: Bool { get }
     mutating func updateLastPage(itemsCount: Int)

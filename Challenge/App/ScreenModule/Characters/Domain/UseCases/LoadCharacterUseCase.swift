@@ -25,7 +25,7 @@ final class LoadCharactersUseCaseImp: LoadCharactersUseCase {
             let respositoryResult = try await characterRepository.fetchCharacters(urlList: url)
             url = respositoryResult.info.next ?? .empty
             return .success(respositoryResult.character)
-        }catch {
+        } catch {
             return .failure(error)
         }
     }    

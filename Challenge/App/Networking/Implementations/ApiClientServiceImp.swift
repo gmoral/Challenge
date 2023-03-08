@@ -8,18 +8,22 @@
 import Foundation
 
 struct ApiClientServiceImp: ApiClientService {
-    private let session: URLSession
+    let session: URLSession
+
     init(session: URLSession = URLSession.shared) {
         self.session = session
     }
+
     func request<T: Decodable>(url: URL?, type: T.Type) async throws -> T {
         guard let url = url else { throw ApiError.errorInUrl }
         return try await makeRequest(url: url)
     }
+
     private func makeRequest<T: Decodable>(url: URL) async throws -> T {
         let request = try await session.data(from: url)
         return try validateResponse(request: request)
     }
+
     private func validateResponse<T: Decodable>(request: (data: Data, httpResponse: URLResponse)) throws -> T {
         guard let httpResponse = request.httpResponse as? HTTPURLResponse
         else { throw ApiError.unknowError }
@@ -34,6 +38,7 @@ struct ApiClientServiceImp: ApiClientService {
             throw ApiError.unknowError
         }
     }
+    
     private func decodeModel<T: Decodable>(data: Data) throws -> T {
         let decoder = JSONDecoder()
         let model = try? decoder.decode(T.self, from: data)

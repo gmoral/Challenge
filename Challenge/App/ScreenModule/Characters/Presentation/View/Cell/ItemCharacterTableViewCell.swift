@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 final class ItemCharacterTableViewCell: UITableViewCell {
     
     private let mainContainerView: UIView = {
@@ -23,7 +22,6 @@ final class ItemCharacterTableViewCell: UITableViewCell {
 
         let imageView = UIImageView()
         imageView.setWidthConstraint(with: ViewValues.defaultHeightContainerCell)
-        imageView.image = UIImage(named: "default")
         imageView.contentMode = .scaleAspectFill
         return imageView
     }()
@@ -69,7 +67,14 @@ final class ItemCharacterTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
+    private var task: Task<Void, Never>?
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        task?.cancel()
+    }
+
     private func configUI() {
         selectionStyle = .none
         
@@ -106,11 +111,24 @@ final class ItemCharacterTableViewCell: UITableViewCell {
             labelContainerStackView.addArrangedSubview($0)
         }
     }
-    
+
     public func configData(viewModel: ItemCharacterViewModel) {
         nameLabel.text = viewModel.name
         specieLabel.text = viewModel.specie
         statusLabel.text = viewModel.status
+        setImage(viewModel: viewModel)
+    }
+
+    private func setImage(viewModel: ItemCharacterViewModel) {
+        characterImageView.addDefaultImage()
+        if let data = viewModel.imageData {
+            characterImageView.setImageFromData(data: data)
+        } else {
+            task = Task {
+                let dataImage = await viewModel.getImageData()
+                characterImageView.setImageFromData(data: dataImage)
+            }
+        }
     }
 }
 

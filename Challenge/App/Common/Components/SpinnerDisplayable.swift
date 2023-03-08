@@ -22,17 +22,20 @@ extension SpinnerDisplayable where Self: UIViewController {
         containerView.backgroundColor = UIColor.red.withAlphaComponent(ViewValues.opacityContainerSpinner)
         addSpinnerIndicatorToContainer(containerView: containerView)
     }
+
     private func addSpinnerIndicatorToContainer(containerView: UIView) {
         let spinner = UIActivityIndicatorView()
         containerView.addSubview(spinner)
         spinner.centerXY()
         spinner.startAnimating()
     }
+
     func hideSpinner() {
         if let foundView = view.viewWithTag(ViewValues.tagIdentifierSpinner) {
             foundView.removeFromSuperview()
         }
     }
+    
     private var doesNotExistAnotherSpinner: Bool {
         view.viewWithTag(ViewValues.tagIdentifierSpinner) == nil
     }

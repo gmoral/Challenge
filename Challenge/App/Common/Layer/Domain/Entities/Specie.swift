@@ -23,7 +23,7 @@ enum Specie {
     }
 }
 
-extension Specie : CustomStringConvertible {
+extension Specie: CustomStringConvertible {
     var description: String {
         switch self {
             

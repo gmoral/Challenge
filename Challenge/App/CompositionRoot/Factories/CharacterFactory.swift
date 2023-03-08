@@ -12,10 +12,12 @@ protocol CharacterFactory {
 }
 
 struct CharactersFactoryImp: CharacterFactory {
+    let appContainer: AppContainer
     let urlList: String
+
     func makeModule(coordinator: CharacterViewControllerCoordinator) -> UIViewController {
         let state = PassthroughSubject<StateController, Never>()
-        let apiClient = ApiClientServiceImp()
+        let apiClient = appContainer.apiClient
         let characterRepository = CharacterRepositoryImp(apiClient: apiClient)
         let loadCharacterUseCase = LoadCharactersUseCaseImp(
             characterRepository: characterRepository,
@@ -24,7 +26,9 @@ struct CharactersFactoryImp: CharacterFactory {
         let viewModel = CharacterViewModelImp(
             loadCharacterUseCase: loadCharacterUseCase,
             state: state,
-            lastPageValidationUseCase: lastPageValidationUseCase)
+            lastPageValidationUseCase: lastPageValidationUseCase,
+            imageDataUseCase: appContainer.getDataImageUseCase()
+        )
         let controller = CharacterViewController(viewModel: viewModel)
         controller.title = "Characters"
         return controller

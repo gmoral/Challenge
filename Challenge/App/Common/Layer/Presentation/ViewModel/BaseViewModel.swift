@@ -11,4 +11,3 @@ protocol BaseViewModel {
     var state: PassthroughSubject<StateController, Never> { get }
     func viewDidLoad()
 }
-

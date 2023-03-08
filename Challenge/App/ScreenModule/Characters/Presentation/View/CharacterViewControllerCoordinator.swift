@@ -15,8 +15,7 @@ protocol CharacterViewControllerCoordinator {
 final class CharacterViewController: UITableViewController {
     private let viewModel: CharacterViewModel
     private var cancellable = Set<AnyCancellable>()
-    
-    
+
     init(viewModel: CharacterViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -55,7 +54,6 @@ final class CharacterViewController: UITableViewController {
             }.store(in: &cancellable)
     }
     
-    
 }
 
 // MARK: - TableViewDataSource
@@ -91,4 +89,4 @@ extension CharacterViewController {
     }
 }
 
-extension CharacterViewController : MessageDisplayable { }
+extension CharacterViewController: MessageDisplayable { }

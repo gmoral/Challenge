@@ -8,6 +8,7 @@
 import UIKit
 
 extension UIView {
+    
     func setConstraints(
         top: NSLayoutYAxisAnchor? = nil,
         right: NSLayoutXAxisAnchor? = nil,
@@ -32,6 +33,7 @@ extension UIView {
             leftAnchor.constraint(equalTo: left, constant: pLeft).isActive = true
         }
     }
+
     func fillSuperView(widthPadding: CGFloat = .zero) {
         guard let superview = self.superview else { return }
         setConstraints(top: superview.topAnchor,

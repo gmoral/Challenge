@@ -13,6 +13,7 @@ protocol HomeFactory {
 }
 
 struct HomeFactoryImp: HomeFactory {
+    let appContainer: AppContainer
     
     func makeModule(coordinator: HomeMenuViewControllerCoordinator) -> UIViewController {
         let apiClientService = ApiClientServiceImp()
@@ -41,7 +42,7 @@ struct HomeFactoryImp: HomeFactory {
     }
     
     func makeCoordinatorCharacters(navigation: UINavigationController, urlList: String) -> Coordinator {
-        let characterFactory = CharactersFactoryImp(urlList: urlList)
+        let characterFactory = CharactersFactoryImp(appContainer: appContainer, urlList: urlList)
         let characterCoordinator = CharacterCoordinator(navigation: navigation, characterFactory: characterFactory)
         return characterCoordinator
     }
