@@ -31,6 +31,7 @@ final class CharacterViewController: UITableViewController {
         super.viewDidLoad()
         viewModel.viewDidLoad()
         configTableView()
+        stateController()
     }
     
     private func configTableView() {
@@ -79,9 +80,8 @@ extension CharacterViewController {
         _ tableView: UITableView,
         willDisplay cell: UITableViewCell,
         forRowAt indexPath: IndexPath) {
-            if !viewModel.lastPage {
-                tableView.tableFooterView?.isHidden = viewModel.lastPage
-            }
+
+            tableView.tableFooterView?.isHidden = viewModel.lastPage
     }
     
     override func tableView(
